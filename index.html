@@ -3,6 +3,7 @@
 <head>
     <title>Login</title>
     <link rel="shortcut icon" href="./img/loginfavicon.png" type="image/xicon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/login.css">
 
 </head>
@@ -11,14 +12,16 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
+    <form action="" method="post" onsubmit="return validacion()">
         <h3>Inicie sesion, señor/a:</h3>
 
         <label for="username">Usuario</label>
-        <input type="text" placeholder="Email or Phone" id="username">
+        <input onchange="resetear('username')" type="text" placeholder="Usuario" id="username">
+        <div id="usernameHelp" class="form-text text-danger">Usuario obligatorio</div>
 
         <label for="password">Contraseña</label>
-        <input type="password" placeholder="Password" id="password">
+        <input onchange="resetear('password')" type="password" placeholder="Contraseña" id="password">
+        <div id="passwordHelp" class="form-text text-danger">Contraseña obligatoria</div>
 
         <button>INICIAR</button>
         <div class="social">
@@ -26,5 +29,7 @@
           <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
         </div>
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./loginJS.js"></script>
 </body>
 </html>

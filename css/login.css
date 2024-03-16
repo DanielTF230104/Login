@@ -6,7 +6,7 @@
 /*                       REASON: PROYECT CLASS                        */
 /*                                                                    */
 /**********************************************************************/
-
+.form-text { visibility:hidden;}
 *,
 *:before,
 *:after{
